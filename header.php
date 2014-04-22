@@ -62,7 +62,10 @@
                     <?php echo esc_attr( get_bloginfo( 'description' ) ); ?>
 				</p>
 			</div> <!-- /.col.grid_5_of_12 -->
-
+			<div class="header-right">
+			<h3>Header widget</h3>
+			<p>This is header widget</p>
+			</div>
 			<div class="col grid_7_of_12">
 				<div class="social-media-icons">
 					<?php echo tatva_get_social_media(); ?>
