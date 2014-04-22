@@ -50,6 +50,13 @@ td { vertical-align: top; }
 	.boxed #featured-posts{
 		padding:20px;
 	}
+	
+.banner-right p{
+	color:#fff;
+	font-size:24px;
+	text-transform:uppercase;
+	}
+	
 /* ==========================================================================
    Basic page styles
    ========================================================================== */
@@ -89,7 +96,7 @@ img {
 .entry-content img,
 .comment-content img,
 .widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	max-width: 100%; /* Fluid images for s, comments, and widgets */
 }
 
 img[class*="align"],
@@ -104,6 +111,7 @@ img.header-image,
 img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+	margin-top:15px;
 }
 
 img.wp-smiley,
@@ -394,6 +402,10 @@ sub {
 	text-align: center;
 }
 
+.envira-gallery-public .envira-gallery-item img{
+	width:75%;
+	}
+
 img.wp-smiley, .rsswidget img {
 	border: 0;
 	border-radius: 0;
@@ -443,6 +455,14 @@ img.wp-smiley, .rsswidget img {
 	*overflow: visible;
 	line-height: normal;
 }
+
+#input_1_1,
+#input_1_2,
+#input_1_3,
+#input_1_4,
+#input_1_5{
+	background:#f5f5f5;
+	}
 
 .menu-toggle::-moz-focus-inner,
 button::-moz-focus-inner,
@@ -504,6 +524,11 @@ input[type="submit"] {
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+
+#input_1_5{
+	width:60%;
+	}
+	
 .menu-toggle, a.btn {
 	color: #333333;
 	text-decoration: none;
@@ -638,13 +663,21 @@ select {
 	text-transform: uppercase;
 }
 
-#bannercontainer #button{
-	background: #FAE5ED;
-	border: 4px solid #CA115B;
+#bannercontainer #button,
+.browse-products #button{
 	font-size:20px;
 	font-weight:bold;
 	text-transform:uppercase;
 	padding:10px;
+	color:#000;
+	border:4px solid #000;
+	background:#fff;
+	}
+	
+#bannercontainer #button:hover,
+.browse-products #button:hover{
+	color:#fff;
+	background:#fa7f53;
 	}
 
 /* ==========================================================================
@@ -684,10 +717,11 @@ select {
 }
 
 .site-title a {
-	color: #333;
+	color: #e06f4a;
 	font-size: 64px;
-	font-size: 4rem;
+	font-size: 40px;
 	text-decoration: none;
+	text-transform:uppercase;
 }
 
 #bannercontainer {
@@ -720,6 +754,7 @@ select {
 .banner h1 {
 	font-size: 56px;
 	font-size: 3.50rem;
+	color: #fff;
 }
 
 .banner h2 {
@@ -738,6 +773,11 @@ select {
 	padding: 10px;
 	padding: 0.625rem;
 }
+
+#archives-2 ul li a{
+	font-size:18px;
+	text-decoration:none;
+	}
 
 #maincontentcontainer {
 	width: 100%;
@@ -830,34 +870,21 @@ select {
 
 .entry-header .entry-title a {
 	text-decoration: none;
+	color:#fa7f53;
 }
 
 .entry-header h1 a:visited {
 	color: #333;
 }
 
+.entry-header h1{
+	color:#fa7f53;
+	}
+	
 .entry-header h1 a:hover {
 	color: #000;
 }
 
-article.sticky .featured-post {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
-	font-style: normal;
-	font-weight: 400;
-	border-top: 4px double #aaa;
-	border-bottom: 4px double #aaa;
-	color: #777;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 3;
-	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
-	text-align: center;
-}
-
-article.sticky {
-	border-bottom: 4px double #aaa;
-}
 
 .site-content article {
 	margin-bottom: 40px;
@@ -865,6 +892,7 @@ article.sticky {
 	-ms-word-wrap: break-word;
 	-webkit-hyphens: auto;
 	word-wrap: break-word;
+	padding-left:20px;
 }
 
 .header-meta {
@@ -875,6 +903,7 @@ article.sticky {
 	padding: 5px 0;
 	padding: 0.3125rem 0;
 	*zoom: 1;
+	padding:10px;
 }
 
 .single-download .header-meta {
@@ -909,6 +938,10 @@ article.sticky {
 	padding:20px 0px;
 }
 
+.entry-content p{
+	font-size:18px;
+	}
+
 .entry-content:before,
 .entry-content:after {
 	content: "";
@@ -933,7 +966,8 @@ article.sticky {
 
 .post-categories a:visited,
 .post-tags a:visited {
-	color: #fff;
+	color: #000;
+	background:#fff;
 }
 
 .post-categories a:hover,
@@ -1189,6 +1223,10 @@ article.sticky {
 	text-decoration:none;
 	}
 	
+#front-featured-posts .title a{
+	color:#e06f4a;
+	}
+	
 #front-featured-posts  .title{
 	text-align:center;
 	}
@@ -1206,16 +1244,13 @@ article.sticky {
 		}
 		
 #front-featured-posts .hentry{
-	width: 31.33%;
 	float: left;
 	padding: 20px;
-	background: #FAE5ED;
-	margin-right: 20px;
 	}
 			
 			
 .featured-section-title{
-	text-align:center;
+	text-align:left;
 	font-size: 2.25rem;
 	line-height: 1.1666;
 	padding-bottom: 20px;
@@ -1246,6 +1281,11 @@ article.sticky {
 	padding: 0 0 0 15px;
 	padding: 0 0 0 0.9375rem;
 }
+
+#gform_submit_button_1{
+	color:#000;
+	font-size:20px;
+	}
 
 .format-status .entry-content p {
 	font-size: 20px;
@@ -1587,7 +1627,7 @@ form label.error {
 	width: 100%;
 	margin: 0px auto;
 	color: #000;
-	background: #CA115B;
+	background: #e06f4a;
 	padding: 10px;
 }
 
@@ -1599,15 +1639,10 @@ form label.error {
 
 .smallprint a { 
 	color: #fff;
+	text-decoration:none;
+	font-size:18px;
 }
 
-.smallprint a:visited { 
-	color: #555;
-}
-
-.smallprint a:hover { 
-	color: #000;
-}
 
 #footercontainer  .textwidget{
 	color:#000;
@@ -1616,24 +1651,26 @@ form label.error {
 #footercontainer .widget-title{
 	color:#fff;
 	}
-		
-#footercontainer ul li a{
-	color:#000;
+	
+#footercontainer ul li a,
+#footercontainer .textwidget{
+	color:#fff;
 	text-decoration:none;
 	font-size:18px;
-	}
-			
-#footercontainer ul li a:hover{
-	color:#fff;
-	text-decoration:underline;
 	}
 					
 #footercontainer .screen-reader-text{
 	display:none;
 	}
 	
-#footercontainer .textwidget{
-	font-size:18px;
+#secondary ul li a{
+		text-decoration:none;
+		font-size:20px;
+		color: #fa7f53;
+		}
+		
+#secondary ul li a:hover{
+	color:#000;
 	}
 
 /* ==========================================================================
@@ -1749,7 +1786,7 @@ form label.error {
 	}
 	
 .widget-one{
-	background: #FAE5ED;
+	background:#FAF3EB;
 	padding: 20px;
 	}
 	
@@ -1771,7 +1808,7 @@ form label.error {
 	}
 			
 .testimonial-container{
-		background:#FAE5ED;
+		background:#FAF3EB;
 		}
 		
 .testimonial{
@@ -1800,14 +1837,25 @@ background:#fff;
 	.threecol {
 		margin:0px auto;
 		width:30%;
-		background:#FAE5ED;
 		float:left;
 		padding:20px;
 		margin:10px;
 		}
 		
 .edd-submit.button.blue{
-	background: #f35494;
+	background:#fff;
+	border:2px solid #000;
+	color:#000;
+	}
+	
+.edd-submit.button.blue a:hover{
+		color:#fff;
+		background:#fa7f53;
+		}
+		
+.edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js:hover{
+	background:#fa7f53;
+	color:#fff;
 	}
 	
 .store-info{
@@ -1831,11 +1879,14 @@ background:#fff;
 			}
 			
 .product{
-	background:#FAE5ED;
 	padding:20px;
 	text-align:center;
 	margin:11px;
 	width:31.33%;
+	}
+	
+.product a{
+	text-decoration:none;
 	}
 	
 #featured-products .product-image{
@@ -1843,11 +1894,28 @@ background:#fff;
 	}
 		
 #featured-products .view-details{
-	float: right;
+	right:0px;
+	left:auto;
+	position:absolute;
 	display: block;
 	bottom: 6px;
-	background: #f35494;
+	background:#707DF4;
 	padding: 10px;
+	color:#fff;
+	}
+	
+.home-featured .featured-link{
+	bottom: 4px;
+	background: #fa7f53;
+	color: #fff;
+	padding: 10px;
+	position:absolute;
+	right:0px;
+	left:auto;
+	}
+
+.home-featured .post-link{
+	position:relative;
 	}
 	
 .browse-products{
@@ -1859,15 +1927,16 @@ background:#fff;
 		max-width: 1200px;
 		margin: 0px auto;
 		text-align:center;
-		}
-		
-.browse-products #button{
-	background: #FAE5ED;
-	padding: 20px;
-}
+		}8
 
 .store-template .pagination{
-	clear:both;
+	clear:both:
+	}
+	
+.product-buttons a{
+	color:#000;
+	text-decoration:none;
+	font-size:20px;
 	}
 	
 /* ==========================================================================
@@ -1983,7 +2052,7 @@ li span.dots {
   }
   
   .navigation-wrap{
-	background: #CA115B;
+	background: #e06f4a;
 	padding:20px;
 	}
 	
@@ -2141,6 +2210,9 @@ li span.dots {
 	display: none;
 }
 
+small{
+display:none;
+}
 
 /* ==========================================================================
    Media Queries
@@ -2336,7 +2408,6 @@ li span.dots {
   h2, h3 { page-break-after: avoid; }
 }
 
-
 /* ==========================================================================
    Color Scheme
    ========================================================================== */
@@ -2344,139 +2415,138 @@ li span.dots {
    
 .tatva-blue .navigation-wrap,
 .tatva-blue .smallprint,
-.tatva-blue #featured-products .view-details{
+.tatva-blue #featured-products .view-details,
+.tatva-blue .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-blue  #gform_submit_button_1:hover,
+.tatva-blue .home-featured .featured-link{
 	background:#707DF4;
 	}
 	
 .tatva-blue #bannercontainer,
-.tatva-blue #footercontainer{
+.tatva-blue #footercontainer,
+.tatva-blue #bannercontainer #button:hover,
+.tatva-blue  .browse-products #button:hover{
 	background:#8995FE;
 	}
 	
-.tatva-blue .site-title a{
+.tatva-blue .site-title a,
+.tatva-blue  .entry-header .entry-title,
+.tatva-blue #secondary ul li a,
+.tatva-blue  .entry-header .entry-title a,
+.tatva-blue #front-featured-posts .title a{
 	color:#707DF4;
-	}
-	
-.tatva-blue #bannercontainer #button,
-.tatva-blue .widget-one,
-.tatva-blue .testimonial-container,
-.tatva-blue #front-featured-posts .hentry,
-.tatva-blue  .product ,
-.tatva-blue .browse-products #button{
-	background:#EAECFA;
 	}
 	
 /*End blue*/
 	
 /*Red*/
-   
+
 .tatva-red .navigation-wrap,
 .tatva-red .smallprint,
-.tatva-red #featured-products .view-details{
-	background:#F6032B;
+.tatva-red #featured-products .view-details,
+.tatva-red .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-red  #gform_submit_button_1:hover{
+	background:#F60323;
 	}
 	
 .tatva-red #bannercontainer,
-.tatva-red #footercontainer{
+.tatva-red #footercontainer,
+.tatva-red #bannercontainer #button:hover,
+.tatva-red  .browse-products #button:hover{
 	background:#F76767;
 	}
 	
-.tatva-red .site-title a{
-	color:#f6032b;
+.tatva-red .site-title a,
+.tatva-red  .entry-header .entry-title,
+.tatva-red #secondary ul li a,
+.tatva-red  .entry-header .entry-title a,
+.tatva-red #front-featured-posts .title a{
+	color:#F60323;
 	}
-	
-.tatva-red #bannercontainer #button,
-.tatva-red .widget-one,
-.tatva-red .testimonial-container,
-.tatva-red #front-featured-posts .hentry,
-.tatva-red  .product ,
-.tatva-red .browse-products #button{
-	background:#F6D9D9;
-	}
-	
+
 /*End Red*/
 
 /*Green*/
    
 .tatva-green .navigation-wrap,
 .tatva-green .smallprint,
-.tatva-green #featured-products .view-details{
+.tatva-green #featured-products .view-details,
+.tatva-green .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-green  #gform_submit_button_1:hover,
+.tatva-green .home-featured .featured-link{
 	background:#0B9C2F;
 	}
 	
 .tatva-green #bannercontainer,
-.tatva-green #footercontainer{
-	background:#42E46B;
+.tatva-green #footercontainer,
+.tatva-green #bannercontainer #button:hover,
+.tatva-green  .browse-products #button:hover{
+	background:#0D9C2E;
 	}
 	
-.tatva-green .site-title a{
+.tatva-green .site-title a,
+.tatva-green  .entry-header .entry-title,
+.tatva-green #secondary ul li a,
+.tatva-green  .entry-header .entry-title a,
+.tatva-green #front-featured-posts .title a{
 	color:#0B9C2F;
-	}
-	
-.tatva-green #bannercontainer #button,
-.tatva-green .widget-one,
-.tatva-green .testimonial-container,
-.tatva-green #front-featured-posts .hentry,
-.tatva-green  .product ,
-.tatva-green .browse-products #button{
-	background:#ECFAF0;
 	}
 	
 /*End Green*/
 
-
-/*Gray*/
-   
 .tatva-gray .navigation-wrap,
 .tatva-gray .smallprint,
-.tatva-gray #featured-products .view-details{
-	background:#837e7c;
+.tatva-gray #featured-products .view-details,
+.tatva-gray .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-gray  #gform_submit_button_1:hover,
+.tatva-gray .home-featured .featured-link{
+	background:#837E7C;
 	}
 	
 .tatva-gray #bannercontainer,
-.tatva-gray #footercontainer{
-	background:#8e8e8e;
+.tatva-gray #footercontainer,
+.tatva-gray #bannercontainer #button:hover,
+.tatva-gray  .browse-products #button:hover{
+	background:#8E8E8E;
 	}
 	
-.tatva-gray .site-title a{
-	color:#837e7c;
+.tatva-gray .site-title a,
+.tatva-gray  .entry-header .entry-title,
+.tatva-gray #secondary ul li a,
+.tatva-gray  .entry-header .entry-title a,
+.tatva-gray #front-featured-posts .title a{
+	color:#837E7C;
 	}
-	
-.tatva-gray #bannercontainer #button,
-.tatva-gray .widget-one,
-.tatva-gray .testimonial-container,
-.tatva-gray #front-featured-posts .hentry,
-.tatva-gray  .product ,
-.tatva-gray .browse-products #button{
-	background:#e3e3e3;
-	}
+
+/*Gray*/
+   
+
 	
 /*End Gray*/
 
 /*Purple*/
-   
 .tatva-purple .navigation-wrap,
 .tatva-purple .smallprint,
-.tatva-purple #featured-products .view-details{
+.tatva-purple #featured-products .view-details,
+.tatva-purple .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-purple  #gform_submit_button_1:hover,
+.tatva-purple .home-featured .featured-link{
 	background:#8904B1;
 	}
 	
 .tatva-purple #bannercontainer,
-.tatva-purple #footercontainer{
+.tatva-purple #footercontainer,
+.tatva-purple #bannercontainer #button:hover,
+.tatva-purple  .browse-products #button:hover{
 	background:#BF00FF;
 	}
 	
-.tatva-purple .site-title a{
+.tatva-purple .site-title a,
+.tatva-purple  .entry-header .entry-title,
+.tatva-purple #secondary ul li a,
+.tatva-purple  .entry-header .entry-title a,
+.tatva-purple #front-featured-posts .title a{
 	color:#8904B1;
-	}
-	
-.tatva-purple #bannercontainer #button,
-.tatva-purple .widget-one,
-.tatva-purple .testimonial-container,
-.tatva-purple #front-featured-posts .hentry,
-.tatva-purple  .product ,
-.tatva-purple .browse-products #button{
-	background:#F8EFFB;
 	}
 	
 /*End Purple*/
@@ -2485,28 +2555,27 @@ li span.dots {
    
 .tatva-orange .navigation-wrap,
 .tatva-orange .smallprint,
-.tatva-orange #featured-products .view-details{
-	background:#B05D04;
+.tatva-orange #featured-products .view-details,
+.tatva-orange .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-orange  #gform_submit_button_1:hover,
+.tatva-orange .home-featured .featured-link{
+	background:#e06f4a;
 	}
 	
 .tatva-orange #bannercontainer,
-.tatva-orange #footercontainer{
-	background:#EFAF6B;
+.tatva-orange #footercontainer,
+.tatva-orange #bannercontainer #button:hover,
+.tatva-orange  .browse-products #button:hover{
+	background:##fa7f53;
 	}
 	
-.tatva-orange .site-title a{
-	color:#B05D04;
+.tatva-orange .site-title a,
+.tatva-orange  .entry-header .entry-title,
+.tatva-orange #secondary ul li a,
+.tatva-orange  .entry-header .entry-title a,
+.tatva-orange #front-featured-posts .title a{
+	color:#e06f4a;
 	}
-	
-.tatva-orange #bannercontainer #button,
-.tatva-orange .widget-one,
-.tatva-orange .testimonial-container,
-.tatva-orange #front-featured-posts .hentry,
-.tatva-orange  .product ,
-.tatva-orange .browse-products #button{
-	background:#F4F1E0;
-	}
-	
 /*End Orange*/
 
 
@@ -2514,26 +2583,26 @@ li span.dots {
    
 .tatva-brown .navigation-wrap,
 .tatva-brown .smallprint,
-.tatva-brown #featured-products .view-details{
-	background:#704705;
+.tatva-brown #featured-products .view-details,
+.tatva-brown .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-brown  #gform_submit_button_1:hover,
+.tatva-brown .home-featured .featured-link{
+	background:#B05D04;
 	}
 	
 .tatva-brown #bannercontainer,
-.tatva-brown #footercontainer{
-	background:#875608;
+.tatva-brown  #footercontainer,
+.tatva-brown  #bannercontainer #button:hover,
+.tatva-brown  .browse-products #button:hover{
+	background:#EFAF6B;
 	}
 	
-.tatva-brown .site-title a{
-	color:#704705;
-	}
-	
-.tatva-brown #bannercontainer #button,
-.tatva-brown .widget-one,
-.tatva-brown .testimonial-container,
-.tatva-brown #front-featured-posts .hentry,
-.tatva-brown  .product ,
-.tatva-brown .browse-products #button{
-	background:#F6ECE2;
+.tatva-brown .site-title a,
+.tatva-brown  .entry-header .entry-title,
+.tatva-brown #secondary ul li a,
+.tatva-brown .entry-header .entry-title a,
+.tatva-brown #front-featured-posts .title a{
+	color:#B05D04;
 	}
 	
 /*End Brown*/
@@ -2543,27 +2612,32 @@ li span.dots {
    
 .tatva-pink .navigation-wrap,
 .tatva-pink .smallprint,
-.tatva-pink #featured-products .view-details{
-	color:#fff;
+.tatva-pink #featured-products .view-details,
+.tatva-pink .edd_purchase_submit_wrapper a.edd-add-to-cart.edd-has-js,
+.tatva-pink  #gform_submit_button_1:hover,
+.tatva-pink .home-featured .featured-link{
+	background:#EE2E87;
 	}
 	
 .tatva-pink #bannercontainer,
-.tatva-pink #footercontainer{
-	background:#f35494;
+.tatva-pink  #footercontainer,
+.tatva-pink  #bannercontainer #button:hover,
+.tatva-pink  .browse-products #button:hover{
+	background:#F578B2;
 	}
 	
-.tatva-pink .site-title a{
-	color:#CA115B;
-	}
-	
-.tatva-pink #bannercontainer #button,
-.tatva-pink .widget-one,
-.tatva-pink .testimonial-container,
-.tatva-pink #front-featured-posts .hentry,
-.tatva-pink  .product ,
-.tatva-pink .browse-products #button{
-	background:#FAE5ED;
+.tatva- .site-title a,
+.tatva-pink  .entry-header .entry-title,
+.tatva- #secondary ul li a,
+.tatva-pink  .entry-header .entry-title a,
+.tatva-pink #front-featured-posts .title a{
+	color:#EE2E87;
 	}
 	
 /*End Pink*/
+
+
+
+
+
 

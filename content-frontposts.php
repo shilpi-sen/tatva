@@ -39,10 +39,13 @@ if (get_theme_mod('tatva_front_featured_posts_check')) {
 
                     <?php while ($featuredposts->have_posts()) : $featuredposts->the_post(); ?>
 
-                        <div <?php post_class('clearfix home-featured'); ?>  id="post-<?php the_ID(); ?>">
+                        <div <?php post_class('clearfix home-featured grid_3_of_12');  ?>  id="post-<?php the_ID(); ?>">
                             <?php if(has_post_thumbnail()) { ?>
-                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+                            <a href="<?php the_permalink() ?>" class="post-link" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
                                 <?php the_post_thumbnail('post-thumb'); ?>
+								<span class="featured-link">
+								<?php echo get_theme_mod('tatva_front_featured_link_text'); ?>
+								</span>
                             </a>
                             <?php } ?>
                             <h3 class="title">
