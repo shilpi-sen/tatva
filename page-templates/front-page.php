@@ -68,7 +68,7 @@ get_header(); ?>
 					// Display the active home sidebars
 					for ( $x=1; $x<=4; $x++ ) {
 						if ( is_active_sidebar( 'sidebar-homepage'. $x ) ) { ?>
-							<div class="col <?php echo $containerClass?>">
+							<div class="home-product col <?php echo $containerClass?>">
 								<div class="home-widget-area" role="complementary">
 									<?php dynamic_sidebar( 'sidebar-homepage'. $x ); ?>
 								</div> <!-- /.widget-area -->

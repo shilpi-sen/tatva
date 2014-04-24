@@ -195,6 +195,15 @@ add_filter( 'mce_css', 'tatva_mce_css' );
  * @return void
  */
 function tatva_widgets_init() {
+	register_sidebar( array(
+			'name' => esc_html__( 'Header-widget', 'tatva' ),
+			'id' => 'header-widget',
+			'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'tatva' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		) );
 
 	register_sidebar( array(
 			'name' => esc_html__( 'Main Sidebar', 'tatva' ),

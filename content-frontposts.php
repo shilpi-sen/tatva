@@ -54,9 +54,7 @@ if (get_theme_mod('tatva_front_featured_posts_check')) {
                                 </a>
                             </h3>
 
-                            <span class="post-meta"><small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small></span>
-                            <?php $content = get_the_content();
-					echo wp_trim_words( $content , '50' ); ?>
+                           
 										
                         </div><!--end .entry-->
 

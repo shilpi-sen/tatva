@@ -63,8 +63,10 @@
 				</p>
 			</div> <!-- /.col.grid_5_of_12 -->
 			<div class="header-right">
-			<h3>Header widget</h3>
-			<p>This is header widget</p>
+				<div class="head-area">
+				<?php dynamic_sidebar('header-widget');
+				?>
+				</div>
 			</div>
 			<div class="col grid_7_of_12">
 				<div class="social-media-icons">
